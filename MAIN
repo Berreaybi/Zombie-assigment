@@ -1,0 +1,328 @@
+#include "stm32f4xx.h"
+
+
+
+
+void Bekleme(uint32_t zaman)
+{
+	while(zaman--);
+}
+void Set_Gpio()
+{
+	RCC->AHB1ENR = 0x00000008;
+	GPIOD->OSPEEDR = 0x30000000;
+    GPIOD->PUPDR = 0x00000000;
+	GPIOD->MODER = 0x10000000;
+	GPIOD->OTYPER = 0x00000000;
+
+}
+int main(void)
+{
+	Set_Gpio();
+  while (1)
+  {
+	  //**Z**
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(400000);
+
+	  //**E**
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(400000);
+
+	  //**Y**
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(400000);
+
+	  //**N**
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00004000;
+	  Bekleme(200000);
+	  GPIOD->ODR = 0x00000000;
+	  Bekleme(400000);
+
+	  //**E**
+	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**P**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**B**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**E**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**R**
+		  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+	  	  //**R**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**E**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+
+	  	  //**A *
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(400000);
+
+	  	  //**Y**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(400000);
+
+	  	  //**B**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(400000);
+
+	  	  //**I**
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00000000;
+	  	  Bekleme(200000);
+	  	  GPIOD->ODR = 0x00004000;
+	  	  Bekleme(400000);
+
+
+
+  }
+}
+
